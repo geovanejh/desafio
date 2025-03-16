@@ -1,68 +1,58 @@
 {
-  "ingredientes": {
-    "paes": [
-      {
-        "id": 1,
-        "tipo": "Italiano Branco"
-      },
-      {
-        "id": 2,
-        "tipo": "3 Queijos"
-      },
-      {
-        "id": 3,
-        "tipo": "Parmesão e Orégano"
-      },
-      {
-        "id": 4,
-        "tipo": "Integral"
+  "fornecedores": [
+    {
+      "id": "33d1",
+      "nome": "Fornecedor teste2",
+      "descricao": "Fornecedor 2 3",
+      "contato": [
+        {
+          "nome": "Fulano",
+          "telefone": "51999999999",
+          "prioritario": true
+        },
+        {
+          "nome": "Beltrano",
+          "telefone": "5100000000",
+          "prioritario": false
+        }
+      ],
+      "endereco": {
+        "cep": "93615320",
+        "logradouro": "Rua 1",
+        "numero": "123",
+        "cidade": "Cidade 1",
+        "estado": "RS",
+        "bairro": "Bairro 1",
+        "referencia": "Casa"
       }
-    ],
-    "carnes": [
-      {
-        "id": 1,
-        "tipo": "Maminha"
-      },
-      {
-        "id": 2,
-        "tipo": "Alcatra"
-      },
-      {
-        "id": 3,
-        "tipo": "Picanha"
-      },
-      {
-        "id": 4,
-        "tipo": "Veggie burger"
+    },
+    {
+      "id": "d224",
+      "nome": "É OS GURI DO ENDEREÇO",
+      "descricao": "AAAAA",
+      "contato": [
+        {
+          "nome": "CONTATO PRIORITARIOOO",
+          "telefone": "NOME DELE É ESSE",
+          "prioritario": false
+        },
+        {
+          "nome": "ALTEREI",
+          "telefone": "ALTEREI TAMBÉM",
+          "prioritario": true
+        }
+      ],
+      "endereco": {
+        "cep": "SALVANDO CEP",
+        "logradouro": "DEEEEEEEE",
+        "numero": "FFFFFFFF",
+        "cidade": "GGGGGGGG",
+        "estado": "HHHHHHH",
+        "bairro": "IIIIIIII",
+        "referencia": "JJJJJJJJ"
       }
-    ],
-    "opcionais": [
-      {
-        "id": 1,
-        "tipo": "Bacon"
-      },
-      {
-        "id": 2,
-        "tipo": "Cheddar"
-      },
-      {
-        "id": 3,
-        "tipo": "Salame"
-      },
-      {
-        "id": 4,
-        "tipo": "Tomate"
-      },
-      {
-        "id": 4,
-        "tipo": "Cebola roxa"
-      },
-      {
-        "id": 4,
-        "tipo": "Pepino"
-      }
-    ]
-  },
+    }
+  ],
   "status": [
     {
       "id": "1",
@@ -75,12 +65,6 @@
     {
       "id": "3",
       "tipo": "Finalizado"
-    }
-  ],
-  "burgers": [
-    {
-      "id": "5341",
-      "test": 1
     }
   ]
 }
