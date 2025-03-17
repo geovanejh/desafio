@@ -8,17 +8,23 @@ import { FornecedorForm } from '../../@types/fornecedor';
 import Input from '../../components/Form/Input/Input';
 import { FormHeader, FormRow } from '../../components/Form/styles';
 import toast, { Toaster } from 'react-hot-toast';
-import { maskCEP } from '../../utils/masks';
+import { maskCEP, maskPhoneNumber } from '../../utils/masks';
 import { Container } from '../../components/List/styles';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { MdDelete } from 'react-icons/md';
-import { CiCirclePlus } from 'react-icons/ci';
 import Button from '../../components/Button/Button';
+import { SelectField } from '../../components/Form/SelectField/SelectField';
+import { UFList } from '../../utils/UF';
 
 export const FornecedoresForm = () => {
   const [loading, setLoading] = useState(true);
   const { id: idFornecedor } = useParams<{ id: string }>();
   const navigate = useNavigate();
+
+  const ufItems = UFList().map((uf) => ({
+    value: uf.sigla,
+    label: uf.nome,
+  }));
 
   const {
     register,
@@ -61,13 +67,20 @@ export const FornecedoresForm = () => {
         setValue('endereco.logradouro', data.logradouro);
         setValue('endereco.bairro', data.bairro);
         setValue('endereco.cidade', data.localidade);
-        setValue('endereco.estado', data.estado);
+        setValue('endereco.estado', data.uf); // Corrige para data.uf
       } catch (error) {
         console.error('Erro ao buscar informações do CEP:', error);
         toast.error('Erro ao buscar informações do CEP.');
       }
     }
   };
+
+  const handlePhoneChange =
+    (index: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
+      const rawValue = e.target.value.replace(/\D/g, '');
+      const maskedValue = maskPhoneNumber(rawValue);
+      setValue(`contato.${index}.telefone`, maskedValue);
+    };
 
   const setup = async () => {
     if (!idFornecedor) return;
@@ -80,7 +93,6 @@ export const FornecedoresForm = () => {
           cep: maskCEP(data.endereco.cep || ''),
         },
       });
-      console.log('data: ', data);
     } catch (error) {
       toast.error('Erro ao carregar fornecedores.');
     } finally {
@@ -218,9 +230,11 @@ export const FornecedoresForm = () => {
                 null
               }
               type="text"
-              placeholder="Telefone"
+              placeholder="(99) 99999-9999"
               id={`contato.${index}.telefone`}
               register={register}
+              onChange={handlePhoneChange(index)}
+              maxLength={15}
             />
             <div>
               <Input
@@ -319,18 +333,17 @@ export const FornecedoresForm = () => {
           />
         </FormRow>
         <FormRow layout="0.5fr 1fr">
-          <Input
+          <SelectField
             label="Estado"
             error={
               (errors.endereco?.estado && errors.endereco.estado.message) ||
               null
             }
-            type="text"
-            placeholder="Estado"
             id="endereco.estado"
             register={register}
+            items={ufItems}
+            placeholder="Estado"
           />
-
           <Input
             label="Referência"
             error={

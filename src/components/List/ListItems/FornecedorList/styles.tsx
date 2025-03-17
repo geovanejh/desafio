@@ -66,3 +66,16 @@ export const FornecedorItem = styled.div`
     }
   }
 `;
+
+export const Phone = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a {
+    &:hover {
+      color: green;
+    }
+  }
+`;
