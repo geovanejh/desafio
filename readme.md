@@ -44,7 +44,13 @@ Antes de instalar e executar o projeto, certifique-se de ter as seguintes ferram
    VITE_VIACEP_URL="https://viacep.com.br/ws"
   ````
 
-4. Inicie a aplicação
+4. Inicie o json-server (mock backend):
+
+   ```bash
+   npm run json-server
+   ````
+
+5. Inicie a aplicação
 
    ```bash
    npm start
