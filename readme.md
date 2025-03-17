@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# Sistema de Gerenciamento de Fornecedores
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao Sistema de Gerenciamento de Fornecedores, uma aplicação web desenvolvida para gerenciar informações de fornecedores, incluindo nome, descrição, contatos, endereços e exportação de dados em formato CSV. Este projeto utiliza tecnologias modernas como React, TypeScript e uma API REST para fornecer uma interface amigável e funcional.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Cadastro de Fornecedores**: Adicione novos fornecedores com nome, descrição, contatos e endereço.
+- **Edição e Exclusão**: Edite ou remova fornecedores existentes com confirmação de exclusão.
+- **Busca**: Filtre fornecedores pelo nome na lista.
+- **Máscaras de Formato**: Formate automaticamente campos como CEP (00000-000) e telefone ((99) 99999-9999).
+- **Integração com API de CEP**: Preencha automaticamente logradouro, bairro, cidade e estado ao inserir um CEP válido.
+- **Exportação para CSV**: Exporte a lista de fornecedores filtrados para um arquivo CSV.
+- **Interface Responsiva**: Layout otimizado para diferentes tamanhos de tela.
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Antes de instalar e executar o projeto, certifique-se de ter as seguintes ferramentas instaladas:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [Node.js](https://nodejs.org/) (versão 14.x ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+- Uma API REST configurada (ex.: local ou remota) para gerenciar os dados dos fornecedores
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalação
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone o repositório:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ````
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ````
+
+3. Configure as variáveis de ambiente:
+
+  Crie um arquivo .env na raiz do projeto com base no arquivo .env.example (se disponível) e adicione as credenciais da API, como a URL base.
+  Exemplo de .env:
+   ```bash
+   VITE_BACKEND_URL="http://localhost:3001"
+   VITE_VIACEP_URL="https://viacep.com.br/ws"
+  ````
+
+4. Inicie a aplicação
+
+   ```bash
+   npm start
+   ````
+
+ ## Tecnologias Utilizadas
+ 
+ Frontend:
+- React - Biblioteca para construção de interfaces.
+- TypeScript - Suporte a tipagem estática.
+- React Router - Navegação entre páginas.
+- Styled-Components - Estilização de componentes.
+- Gerenciamento de Formulários:
+- React Hook Form - Gerenciamento de formulários.
+- Yup - Validação de formulários.
+
+Utilitários:
+- Papa Parse - Geração de arquivos CSV.
+- React Hot Toast - Notificações.
+
+Outros:
+- API REST personalizada para dados de fornecedores e CEP.
