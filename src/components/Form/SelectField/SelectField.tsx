@@ -5,7 +5,7 @@ import { StyledSelect } from './styles';
 interface SelectFieldProps {
   items: Array<{ value: string; label: string }>;
   id: string;
-  register: any; // Tipagem do react-hook-form
+  register: any;
   error: string | null;
   label: string;
   placeholder: string;

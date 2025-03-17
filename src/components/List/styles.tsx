@@ -16,13 +16,11 @@ export const Container = styled.div`
     margin-top: 32px;
   }
 
-  /* Tablets (≤1024px) */
   @media (max-width: 1024px) {
     padding: 24px;
     max-width: 90%;
   }
 
-  /* Mobile (≤768px) */
   @media (max-width: 768px) {
     max-width: 100%;
     padding: 16px;
@@ -44,18 +42,29 @@ export const ItemsList = styled.div`
     padding-bottom: 16px;
   }
 
-  /* Tablets (≤1024px) */
   @media (max-width: 1024px) {
     gap: 12px;
   }
 
-  /* Mobile (≤768px) */
   @media (max-width: 768px) {
     gap: 8px;
   }
 
-  /* Telas muito pequenas (≤480px) */
   @media (max-width: 480px) {
     gap: 6px;
   }
+`;
+
+export const ExportButton = styled.button`
+  padding: 8px 16px;
+  background-color: #0082f5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+  align-self: end;
 `;

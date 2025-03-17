@@ -4,9 +4,9 @@ import { HeaderContainer } from './styles';
 
 interface ListProps {
   title: string;
-  items: string[]; // Cabeçalhos da lista
-  buttonClick?: () => void;
-  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void; // Função de busca
+  items: string[];
+  buttonClick: () => void;
+  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const ListHeader = ({

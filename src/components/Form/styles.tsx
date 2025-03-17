@@ -30,7 +30,6 @@ export const FormRow = styled.div<FormRowProps>`
 export const FormHeader = styled.div`
   display: flex;
   gap: 12px;
-  /* margin-bottom: 24px; */
   color: #0082f5;
 
   a {
