@@ -4,7 +4,7 @@ import { FornecedorForm } from '../../@types/fornecedor';
 export const fornecedorSchema = yup.object({
   id: yup.string().notRequired(),
   nome: yup.string().required('Nome é obrigatório'),
-  descricao: yup.string().required('Descrição é obrigatória'),
+  descricao: yup.string(),
   contato: yup
     .array()
     .of(

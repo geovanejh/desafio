@@ -1,71 +1,66 @@
 {
   "fornecedores": [
     {
-      "id": "33d1",
-      "nome": "Fornecedor de pesas usadas",
-      "descricao": "Fornecedora de pesas usadas para maquinário.",
+      "id": "7157",
+      "nome": "Novo Fornecedor",
+      "descricao": "",
       "contato": [
         {
-          "nome": "Geovane Hartmann",
-          "telefone": "51999999999",
+          "nome": "Joselino Ferreira",
+          "telefone": "(32) 31232-1321",
           "prioritario": true
         }
       ],
       "endereco": {
-        "cep": "93615320",
-        "logradouro": "Rua do Fornecedor",
-        "numero": "1234",
-        "cidade": "Novo Hamburgo",
+        "cep": "93600000",
+        "logradouro": "Rua Luiz Gama",
+        "numero": "1232",
+        "cidade": "Estância Velha",
         "estado": "RS",
-        "bairro": "BAIRRO DO FORN",
-        "referencia": "CASA DA ESQUINA DO FORNECEDOR"
+        "bairro": "Lira",
+        "referencia": ""
       }
     },
     {
-      "id": "d224",
-      "nome": "DBC Company",
-      "descricao": "Fornecedora de desenvolvedores",
+      "id": "0fdc",
+      "nome": "Geovane Harmtann",
+      "descricao": "Sou eu mesmo :)",
       "contato": [
         {
-          "nome": "Jonas Silva",
-          "telefone": "51989072379",
+          "nome": "Geovane Hartmann",
+          "telefone": "(51) 98907-2379",
           "prioritario": true
-        },
-        {
-          "nome": "ALTEREI",
-          "telefone": "5198",
-          "prioritario": false
         }
       ],
       "endereco": {
         "cep": "93615320",
         "logradouro": "Rua Luiz Gama",
-        "numero": "1234",
+        "numero": "166",
         "cidade": "Estância Velha",
         "estado": "RS",
         "bairro": "Lira",
-        "referencia": "JJJJJJJJ"
+        "referencia": "Casa da Esquina."
       }
     },
     {
-      "id": "0c61",
+      "id": "c47e",
       "nome": "VExpenses Despesas Corporativas",
       "descricao": "Fornecedor de despesas corporativas número um do mercado.",
       "contato": [
         {
           "nome": "João Fonseca",
-          "telefone": "51989072379",
+          "telefone": "(51) 98232-3221",
           "prioritario": true
         }
       ],
       "endereco": {
-        "cep": "90250590",
-        "logradouro": "Avenida Padre Leopoldo Brentano",
-        "numero": "1663",
-        "cidade": "Porto Alegre",
+        "cep": "93615000",
+        "logradouro": "Avenida Brasil",
+        "numero": "200",
+        "cidade": "Estância Velha",
         "estado": "RS",
-        "bairro": "Farrapos",
-        "referencia": "Arena do Grêmio"
+        "bairro": "Lira",
+        "referencia": ""
       }
     }
   ],
