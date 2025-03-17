@@ -32,7 +32,6 @@ export const HeaderContainer = styled.div`
     margin-bottom: 12px;
   }
 
-  /* Tablets (≤1024px) */
   @media (max-width: 1024px) {
     > div:first-child {
       margin-bottom: 16px;
@@ -45,7 +44,6 @@ export const HeaderContainer = styled.div`
     }
   }
 
-  /* Mobile (≤768px) */
   @media (max-width: 768px) {
     > div:first-child {
       flex-direction: column;
@@ -76,7 +74,6 @@ export const HeaderContainer = styled.div`
     }
   }
 
-  /* Telas muito pequenas (≤480px) */
   @media (max-width: 480px) {
     > div:first-child {
       gap: 8px;

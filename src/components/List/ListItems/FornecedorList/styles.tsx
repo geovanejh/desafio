@@ -15,7 +15,7 @@ export const FornecedorItem = styled.div`
   &:hover {
     color: black;
     cursor: pointer;
-    background-color: #f5f5f5; /* gray, almost white */
+    background-color: #f5f5f5;
   }
 
   p {

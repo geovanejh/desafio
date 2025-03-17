@@ -67,9 +67,8 @@ export const FornecedoresForm = () => {
         setValue('endereco.logradouro', data.logradouro);
         setValue('endereco.bairro', data.bairro);
         setValue('endereco.cidade', data.localidade);
-        setValue('endereco.estado', data.uf); // Corrige para data.uf
+        setValue('endereco.estado', data.uf);
       } catch (error) {
-        console.error('Erro ao buscar informações do CEP:', error);
         toast.error('Erro ao buscar informações do CEP.');
       }
     }
@@ -128,14 +127,9 @@ export const FornecedoresForm = () => {
           cep: data.endereco.cep.replace(/\D/g, ''),
         },
       });
-      console.log(
-        'Fornecedor atualizado com sucesso! Resposta:',
-        response.data,
-      );
       toast.success('Fornecedor atualizado com sucesso!');
       navigate(-1);
     } catch (error) {
-      console.error('Erro ao atualizar fornecedor:', error);
       toast.error('Erro ao atualizar fornecedor.');
     }
   };
@@ -149,17 +143,14 @@ export const FornecedoresForm = () => {
           cep: data.endereco.cep.replace(/\D/g, ''),
         },
       });
-      console.log('Fornecedor criado com sucesso! Resposta:', response.data);
       toast.success('Fornecedor criado com sucesso!');
       navigate(-1);
     } catch (error) {
-      console.error('Erro ao criar fornecedor:', error);
       toast.error('Erro ao criar fornecedor.');
     }
   };
 
   const onSubmit = async (data: FornecedorForm) => {
-    console.log('Dados enviados:', data);
     if (idFornecedor) {
       return handleUpdate(data);
     } else {

@@ -1,6 +1,6 @@
 import Input from '../Input/Input';
 import { StyledInput } from '../Input/styles';
-import { SearchContainer } from './Styles';
+import { SearchContainer } from './styles';
 import { BsSearch } from 'react-icons/bs';
 
 import { ChangeEventHandler } from 'react';
