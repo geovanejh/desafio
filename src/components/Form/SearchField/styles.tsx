@@ -6,6 +6,6 @@ export const SearchContainer = styled.div`
 
   svg {
     margin-left: -30px;
-    color: lightgray;
+    color: #3fa1ff;
   }
 `;

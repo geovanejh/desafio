@@ -1,3 +1,4 @@
+import Button from '../../Button/Button';
 import SearchField from '../../Form/SearchField/SearchField';
 import { HeaderContainer } from './styles';
 
@@ -18,8 +19,14 @@ export const ListHeader = ({
     <HeaderContainer>
       <div>
         <h3>{title}</h3>
-        {buttonClick && <button onClick={() => buttonClick()}>Novo</button>}
-        <SearchField onChange={onSearchChange} />
+        <div>
+          <SearchField onChange={onSearchChange} />
+          {buttonClick && (
+            <Button type="primary" onClick={() => buttonClick()}>
+              Novo
+            </Button>
+          )}
+        </div>
       </div>
       <div>
         {items.map((item, index) => (
