@@ -10,14 +10,21 @@ export const fornecedorSchema = yup.object({
     .of(
       yup
         .object({
-          nome: yup.string().required('Nome do contato é obrigatório'),
+          nome: yup.string().required('Nome é obrigatório'),
           telefone: yup.string().required('Telefone é obrigatório'),
           prioritario: yup.boolean().required('Prioritário é obrigatório'),
         })
         .required(),
     )
     .min(1, 'Pelo menos um contato é necessário')
-    .required('Contatos são obrigatórios'),
+    .required('Contatos são obrigatórios')
+    .test(
+      'at-least-one-priority',
+      'Pelo menos um contato deve ser prioritário',
+      (contatos) => {
+        return contatos?.some((contato) => contato.prioritario) || false;
+      },
+    ),
   endereco: yup
     .object({
       cep: yup.string().required('CEP é obrigatório'),
@@ -26,7 +33,10 @@ export const fornecedorSchema = yup.object({
       cidade: yup.string().required('Cidade é obrigatória'),
       estado: yup.string().required('Estado é obrigatório'),
       bairro: yup.string().required('Bairro é obrigatório'),
-      referencia: yup.string().notRequired(),
+      referencia: yup
+        .string()
+        .notRequired()
+        .test('notNull', 'Não pode ser null', (value) => value !== null),
     })
     .required('Endereço é obrigatório'),
 }) as yup.ObjectSchema<FornecedorForm>;

@@ -2,54 +2,70 @@
   "fornecedores": [
     {
       "id": "33d1",
-      "nome": "Fornecedor teste2",
-      "descricao": "Fornecedor 2 3",
+      "nome": "Fornecedor de pesas usadas",
+      "descricao": "Fornecedora de pesas usadas para maquinário.",
       "contato": [
         {
-          "nome": "Fulano",
+          "nome": "Geovane Hartmann",
           "telefone": "51999999999",
+          "prioritario": true
+        }
+      ],
+      "endereco": {
+        "cep": "93615320",
+        "logradouro": "Rua do Fornecedor",
+        "numero": "1234",
+        "cidade": "Novo Hamburgo",
+        "estado": "RS",
+        "bairro": "BAIRRO DO FORN",
+        "referencia": "CASA DA ESQUINA DO FORNECEDOR"
+      }
+    },
+    {
+      "id": "d224",
+      "nome": "DBC Company",
+      "descricao": "Fornecedora de desenvolvedores",
+      "contato": [
+        {
+          "nome": "Jonas Silva",
+          "telefone": "51989072379",
           "prioritario": true
         },
         {
-          "nome": "Beltrano",
-          "telefone": "5100000000",
+          "nome": "ALTEREI",
+          "telefone": "5198",
           "prioritario": false
         }
       ],
       "endereco": {
         "cep": "93615320",
-        "logradouro": "Rua 1",
-        "numero": "123",
-        "cidade": "Cidade 1",
+        "logradouro": "Rua Luiz Gama",
+        "numero": "1234",
+        "cidade": "Estância Velha",
         "estado": "RS",
-        "bairro": "Bairro 1",
-        "referencia": "Casa"
+        "bairro": "Lira",
+        "referencia": "JJJJJJJJ"
       }
     },
     {
-      "id": "d224",
-      "nome": "É OS GURI DO ENDEREÇO",
-      "descricao": "AAAAA",
+      "id": "0c61",
+      "nome": "VExpenses Despesas Corporativas",
+      "descricao": "Fornecedor de despesas corporativas número um do mercado.",
       "contato": [
         {
-          "nome": "CONTATO PRIORITARIOOO",
-          "telefone": "NOME DELE É ESSE",
-          "prioritario": false
-        },
-        {
-          "nome": "ALTEREI",
-          "telefone": "ALTEREI TAMBÉM",
+          "nome": "João Fonseca",
+          "telefone": "51989072379",
           "prioritario": true
         }
       ],
       "endereco": {
-        "cep": "SALVANDO CEP",
-        "logradouro": "DEEEEEEEE",
-        "numero": "FFFFFFFF",
-        "cidade": "GGGGGGGG",
-        "estado": "HHHHHHH",
-        "bairro": "IIIIIIII",
-        "referencia": "JJJJJJJJ"
+        "cep": "90250590",
+        "logradouro": "Avenida Padre Leopoldo Brentano",
+        "numero": "1663",
+        "cidade": "Porto Alegre",
+        "estado": "RS",
+        "bairro": "Farrapos",
+        "referencia": "Arena do Grêmio"
       }
     }
   ],

@@ -64,10 +64,10 @@ export const Home = () => {
     <Loading />
   ) : (
     <>
-      <List layout="1.5fr 1.5fr 1fr 1fr 1fr 0.5fr">
+      <List>
         <ListHeader
-          title="Fornecedores VExpenses"
-          items={['Nome', 'Contato', 'Endereço']}
+          title="LISTA DE FORNECEDORES"
+          items={['Nome', 'Descrição', 'Contato', 'Endereço']}
           buttonClick={() => navigate('/fornecedores/form')}
           onSearchChange={handleSearchChange}
         />
